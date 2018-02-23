@@ -8,7 +8,7 @@
 
     <title>nokia demo</title>
 
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!--<link rel="stylesheet" href="css/jquery.fullPage.css">-->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.min.js"></script>
@@ -18,7 +18,7 @@
         $(document).ready(function () {
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
-            $.fn.fullpage({
+            $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
 
@@ -30,6 +30,15 @@
                     if (index == 1) {
                         myVideo.pause();
                     }
+                    //清除所有的current样式
+                    $(".section").removeClass("current");
+
+                    //添加样式
+                    setTimeout(function () {
+                        $(".section").eq(nextIndex - 1).addClass("current");
+                    }, 30)
+
+
                 },
                 afterLoad: function (index) {
                     console.log(index);
@@ -40,8 +49,30 @@
                         // lastVideo.play();
                         audioAutoPlay('audiolast')
                     }
+
+
+
                 }
             });
+
+            function loadAudio(src, callback) {
+                var audio = new Audio(src);
+                audio.onloadedmetadata = callback;
+                audio.src = src;
+            }
+
+            var audioUrl = "vido.mp3";//音频路径
+            var audioUrll = "vidoo.mp3";
+            //调用方法
+            loadAudio(audioUrll, function () {
+                $('#audiolast').attr("src", audioUrll);
+                alert("加载完成2");
+            });
+            loadAudio(audioUrl, function () {
+                $('#audiofirst').attr("src", audioUrl);
+                alert("加载完成1");
+            });
+            
 
             function play_music() {
                 event.stopPropagation();
@@ -72,33 +103,36 @@
 </head>
 
 <body>
-    <div class="section section_fitst">
-        <a href="javascript:;" id="mc_play" class="on">
+    <div id="fullpage">
+        <div class="section section_fitst current">
+            <a href="javascript:;" id="mc_play" class="on">
             <img src="images/play.png" alt="">
-           <audio controls id='audiofirst'>
-                <source src="vido.mp3" type="audio/mp3"></source>
+           <audio controls preload='auto' id='audiofirst'>
+                <source src="" type="audio/mp3"></source>
             </audio>
         </a>
+        </div>
+
+        <div class="section section_two ">
+        </div>
+
+        <div class="section section_three ">
+
+        </div>
+
+        <div class="section section_four ">
+        </div>
+        <div class="section section_five ">
+        </div>
+        <div class="section section_six ">
+        </div>
+        <div class="section section_last ">
+        </div>
     </div>
 
-    <div class="section section_two">
-    </div>
 
-    <div class="section section_three">
-
-    </div>
-
-    <div class="section section_four">
-    </div>
-    <div class="section section_five">
-    </div>
-    <div class="section section_six">
-    </div>
-    <div class="section section_last">
-    </div>
-
-    <audio controls loop="loop" id='audiolast'>
-        <source src="vidoo.mp3" type="audio/mp3"></source>
+    <audio controls loop="loop" preload='auto' id='audiolast'>
+        <source src="" type="audio/mp3"></source>
     </audio>
 </body>
 

@@ -8,7 +8,7 @@
         width: auto;
         height: auto;
         position: absolute;
-        bottom: 30px;
+        bottom: 65px;
         left: 50%;
         margin-left: -85px;
         -webkit-tap-highlight-color: transparent;
@@ -16,6 +16,12 @@
         -webkit-user-select: none;
         img {
             z-index: 2;
+            -webkit-animation: glow 800ms ease-out infinite alternate;
+            -moz-animation: glow 800ms ease-out infinite alternate;
+            -o-animation: glow 800ms ease-out infinite alternate;
+            -ms-animation: glow 800ms ease-out infinite alternate;
+            /*这里使用了呼吸动画*/
+            animation: glow 800ms ease-out infinite alternate;
         }
         audio {
             opacity: 0;
@@ -69,4 +75,51 @@
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
+}
+
+
+/*以下定义动画帧*/
+@-webkit-keyframes glow {
+    0% {
+        transform:scale(1,1);
+    }    
+    100% {
+        transform:scale(1.4,1.4);
+    }
+}
+
+@-moz-keyframes glow {
+    0% {
+        transform:scale(1,1);
+    }    
+    100% {
+        transform:scale(1.4,1.4);
+    }
+}
+
+@-o-keyframes glow {
+    0% {
+        transform:scale(1,1);
+    }    
+    100% {
+        transform:scale(1.4,1.4);
+    }
+}
+
+@-ms-keyframes glow {
+    0% {
+        transform:scale(1,1);
+    }    
+    100% {
+        transform:scale(1.4,1.4);
+    }
+}
+
+@keyframes glow {
+    0% {
+        transform:scale(1,1);
+    }    
+    100% {
+        transform:scale(1.4,1.4);
+    }
 }
