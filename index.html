@@ -13,21 +13,13 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
+    <!--<script src="js/audio.js"></script>-->
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         $(document).ready(function () {
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
-            var audiofirstCan,audiolastCan;
-            myVideo.addEventListener('canplay',function(){
-                audiofirstCan = true;
-                alert(2)
-            })
-            lastVideo.addEventListener('canplay',function(){
-                audiolastCan = true;
-                alert(3)
-            })
-              $('#fullpage').fullpage({
+            $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
 
@@ -43,9 +35,9 @@
                     $(".section").removeClass("current");
 
                     //添加样式
-                    setTimeout(function(){
-                        $(".section").eq(nextIndex-1).addClass("current");
-                    },30)
+                    setTimeout(function () {
+                        $(".section").eq(nextIndex - 1).addClass("current");
+                    }, 30)
 
 
                 },
@@ -56,27 +48,29 @@
 
                     } else {
                         // lastVideo.play();
-                        audioAutoPlay('audiolast')
+                        // audioAutoPlay('audiolast')
+                        autoPlayAudio1();
                     }
-                   
-                    
+
+
 
                 }
             });
-            
+
             function play_music() {
                 event.stopPropagation();
                 audioAutoPlay('audiofirst');
                 console.log(1)
 
             }
-            
+
             $('#mc_play').on('click', function (e) {
                 play_music();
             })
             // setInterval(function () {
             //     $.fn.fullpage.moveSectionDown();
             // }, 20000);
+            //自动播放背景音乐方法
             function audioAutoPlay(id) {
                 var audio = document.getElementById(id);
                 audio.play();
@@ -87,8 +81,20 @@
                     audio.play();
                 }, false);
             }
-
-
+            function autoPlayAudio1() {
+                wx.config({
+                    // 配置信息, 即使不正确也能使用 wx.ready
+                    debug: false,
+                    appId: '',
+                    timestamp: 1,
+                    nonceStr: '',
+                    signature: '',
+                    jsApiList: []
+                });
+                wx.ready(function () {
+                    document.getElementById('audiolast').play();
+                });
+            }
         });
     </script>
 </head>
@@ -98,7 +104,7 @@
         <div class="section section_fitst current">
             <a href="javascript:;" id="mc_play" class="on">
             <img src="images/play.png" alt="">
-           <audio controls preload='auto'id='audiofirst'>
+           <audio controls preload='auto'id='audiofirst' class="foo">
                 <source src="vido.mp3" type="audio/mp3"></source>
             </audio>
         </a>
