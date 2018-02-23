@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>fullPage.js — 基本演示</title>
+
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+
+    <script src="js/jquery.fullPage.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var myVideo = document.getElementById("audiofirst");
+            var lastVideo = document.getElementById("audiolast");
+            $.fn.fullpage({
+
+                // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+                'setAutoScrolling': true,
+                onLeave: function (index, nextIndex) {
+                    console.log(index, nextIndex)
+                    // console.log(nextIndex)
+                    if (index == 1) {
+                        myVideo.pause();
+                    }
+                },
+                afterLoad: function (index) {
+                    console.log(index);
+                    if (index == 'page1' || index == 'page2') {
+                        lastVideo.pause();
+
+                    } else {
+                        lastVideo.play();
+                    }
+                }
+            });
+
+            function play_music() {
+                event.stopPropagation();
+                myVideo.play();
+                console.log(1)
+
+            }
+            $('#mc_play').on('click', function (e) {
+                play_music();
+            })
+            setInterval(function () {
+                $.fn.fullpage.moveSectionDown();
+            }, 20000);
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="section section_fitst">
+        <a href="javascript:;" id="mc_play" class="on">
+            <img src="images/play.png" alt="">
+           <audio controls id='audiofirst'>
+                <source src="vido.mp3" type="audio/mp3"></source>
+            </audio>
+        </a>
+    </div>
+
+    <div class="section section_two">
+    </div>
+
+    <div class="section section_three">
+
+    </div>
+
+    <div class="section section_four">
+    </div>
+    <div class="section section_five">
+    </div>
+    <div class="section section_six">
+    </div>
+    <div class="section section_last">
+    </div>
+
+    <audio controls id='audiolast'>
+        <source src="vidoo.mp3" type="audio/mp3"></source>
+    </audio>
+</body>
+
+</html>
