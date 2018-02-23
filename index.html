@@ -56,21 +56,16 @@
             //     $.fn.fullpage.moveSectionDown();
             // }, 20000);
             function audioAutoPlay(id) {
-                var audio = document.getElementById(id),
-                    play = function () {
-                        audio.play();
-                        document.removeEventListener("touchstart", play, false);
-                    };
+                var audio = document.getElementById(id);
                 audio.play();
                 document.addEventListener("WeixinJSBridgeReady", function () {
-                    play();
+                    audio.play();
                 }, false);
                 document.addEventListener('YixinJSBridgeReady', function () {
-                    play();
+                    audio.play();
                 }, false);
-                document.addEventListener("touchstart", play, false);
             }
-            
+
 
         });
     </script>
