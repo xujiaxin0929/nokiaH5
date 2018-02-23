@@ -38,32 +38,14 @@
 
                     } else {
                         // lastVideo.play();
-                        // audioAutoPlay('audiolast');
-                        setTimeout(function () {
-                            $(window).scrollTop(1);
-                        }, 0);
-                        lastVideo.play();
-                        document.addEventListener("WeixinJSBridgeReady", function () {
-                            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                                lastVideo.play();
-                            });
-                        }, false);
+                        audioAutoPlay('audiolast')
                     }
                 }
             });
 
             function play_music() {
                 event.stopPropagation();
-                // audioAutoPlay('audiofirst');
-                setTimeout(function () {
-                            $(window).scrollTop(1);
-                        }, 0);
-                        myVideo.play();
-                        document.addEventListener("WeixinJSBridgeReady", function () {
-                            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                                myVideo.play();
-                            });
-                        }, false);
+                audioAutoPlay('audiofirst');
                 console.log(1)
 
             }
@@ -73,22 +55,22 @@
             // setInterval(function () {
             //     $.fn.fullpage.moveSectionDown();
             // }, 20000);
-            // function audioAutoPlay(id) {
-            //     var audio = document.getElementById(id),
-            //         play = function () {
-            //             audio.play();
-            //             document.removeEventListener("touchstart", play, false);
-            //         };
-            //     audio.play();
-            //     document.addEventListener("WeixinJSBridgeReady", function () {
-            //         play();
-            //     }, false);
-            //     document.addEventListener('YixinJSBridgeReady', function () {
-            //         play();
-            //     }, false);
-            //     document.addEventListener("touchstart", play, false);
-            // }
-
+            function audioAutoPlay(id) {
+                var audio = document.getElementById(id),
+                    play = function () {
+                        audio.play();
+                        document.removeEventListener("touchstart", play, false);
+                    };
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    play();
+                }, false);
+                document.addEventListener('YixinJSBridgeReady', function () {
+                    play();
+                }, false);
+                document.addEventListener("touchstart", play, false);
+            }
+            
 
         });
     </script>
