@@ -48,8 +48,7 @@
 
                     } else {
                         // lastVideo.play();
-                        // audioAutoPlay('audiolast')
-                        autoPlayAudio1();
+                        audioAutoPlay('audiolast')
                     }
 
 
@@ -81,20 +80,7 @@
                     audio.play();
                 }, false);
             }
-            function autoPlayAudio1() {
-                wx.config({
-                    // 配置信息, 即使不正确也能使用 wx.ready
-                    debug: false,
-                    appId: '',
-                    timestamp: 1,
-                    nonceStr: '',
-                    signature: '',
-                    jsApiList: []
-                });
-                wx.ready(function () {
-                    document.getElementById('audiolast').play();
-                });
-            }
+            
         });
     </script>
 </head>
@@ -128,7 +114,7 @@
     </div>
 
 
-    <audio controls loop="loop" preload='auto' id='audiolast'>
+    <audio controls loop="loop" autoplay="autoplay" preload='auto' id='audiolast'>
         <source src="vidoo.mp3" type="audio/mp3"></source>
     </audio>
 </body>
