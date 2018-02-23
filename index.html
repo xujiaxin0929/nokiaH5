@@ -18,7 +18,16 @@
         $(document).ready(function () {
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
-            $('#fullpage').fullpage({
+            var audiofirstCan,audiolastCan;
+            myVideo.addEventListener('canplay',function(){
+                audiofirstCan = true;
+                alert(2)
+            })
+            lastVideo.addEventListener('canplay',function(){
+                audiolastCan = true;
+                alert(3)
+            })
+              $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
 
@@ -34,9 +43,9 @@
                     $(".section").removeClass("current");
 
                     //添加样式
-                    setTimeout(function () {
-                        $(".section").eq(nextIndex - 1).addClass("current");
-                    }, 30)
+                    setTimeout(function(){
+                        $(".section").eq(nextIndex-1).addClass("current");
+                    },30)
 
 
                 },
@@ -49,37 +58,19 @@
                         // lastVideo.play();
                         audioAutoPlay('audiolast')
                     }
-
-
+                   
+                    
 
                 }
             });
-
-            function loadAudio(src, callback) {
-                var audio = new Audio(src);
-                audio.onloadedmetadata = callback;
-                audio.src = src;
-            }
-
-            var audioUrl = "vido.mp3";//音频路径
-            var audioUrll = "vidoo.mp3";
-            //调用方法
-            loadAudio(audioUrll, function () {
-                $('#audiolast').attr("src", audioUrll);
-                alert("加载完成2");
-            });
-            loadAudio(audioUrl, function () {
-                $('#audiofirst').attr("src", audioUrl);
-                alert("加载完成1");
-            });
             
-
             function play_music() {
                 event.stopPropagation();
                 audioAutoPlay('audiofirst');
                 console.log(1)
 
             }
+            
             $('#mc_play').on('click', function (e) {
                 play_music();
             })
@@ -107,8 +98,8 @@
         <div class="section section_fitst current">
             <a href="javascript:;" id="mc_play" class="on">
             <img src="images/play.png" alt="">
-           <audio controls preload='auto' id='audiofirst'>
-                <source src="" type="audio/mp3"></source>
+           <audio controls preload='auto'id='audiofirst'>
+                <source src="vido.mp3" type="audio/mp3"></source>
             </audio>
         </a>
         </div>
@@ -132,7 +123,7 @@
 
 
     <audio controls loop="loop" preload='auto' id='audiolast'>
-        <source src="" type="audio/mp3"></source>
+        <source src="vidoo.mp3" type="audio/mp3"></source>
     </audio>
 </body>
 
