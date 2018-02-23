@@ -398,4 +398,9 @@ p {
 .hide {
   display: none !important;
 }
+$rem:75;
+$pre:-webkit-;
+@function rem($n) {
+    @return #{$n/$rem}rem;
+}
 

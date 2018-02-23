@@ -13,7 +13,10 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
     <!--<script src="js/audio.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         $(document).ready(function () {
@@ -31,24 +34,78 @@
                     if (index == 1) {
                         myVideo.pause();
                     }
-                    //清除所有的current样式
-                    $(".section").removeClass("current");
 
-                    //添加样式
-                    setTimeout(function () {
-                        $(".section").eq(nextIndex - 1).addClass("current");
-                    }, 30)
 
 
                 },
-                afterLoad: function (index) {
+                afterLoad: function (anchorLink, index) {
                     console.log(index);
-                    if (index == 'page1' || index == 'page2') {
+                    //清除所有的current样式
+                    $(".section").removeClass("current");
+
+                    //添加类名
+                    setTimeout(function () {
+                        $(".section").eq(index - 1).addClass("current");
+                    }, 30)
+                    if (index == '1' || index == '2') {
                         lastVideo.pause();
 
-                    } else {
+                    } else if (index == '3') {
+                        // alert(1)
                         // lastVideo.play();
-                        audioAutoPlay('audiolast')
+                        $('#audiolast').trigger("click");
+                        // audioAutoPlay('audiolast')
+                    }
+                    // 添加css3
+                    if(index == '1'){
+                         $('.section_fitst .page1_p').show().addClass('animated bounceInDown');
+                    }else{
+                         $('.section_fitst .page1_p').hide().removeClass('animated bounceInDown');
+                    }
+                    if(index == '2'){
+                         $('.section_two .page2_left').show().addClass('animated rollIn');
+                         setTimeout(function(){
+                             $('.section_two .page2_top').show().addClass('animated bounceInDown');
+                         },1000)
+                         setTimeout(function(){
+                             $('.section_two .page2_right').show().addClass('animated fadeInRight');
+                         },1800)
+                         setTimeout(function(){
+                             $('.section_two .page2_bottom').show().addClass('animated fadeInUpBig');
+                         },2500)
+                         
+                    }else{
+                         $('.section_two .page2_left').hide().removeClass('animated rollIn');
+                         $('.section_two .page2_top').hide().removeClass('animated bounceInDown');
+                         $('.section_two .page2_right').hide().removeClass('animated fadeInRight');
+                         $('.section_two .page2_bottom').hide().removeClass('animated fadeInUpBig');
+                    }
+                    if(index == '3'){
+                         $('.section_three .page3_1').show().addClass('animated zoomIn');
+                         setTimeout(function(){
+                             $('.section_three .page3_2').show().addClass('animated zoomInRight');
+                         },1000)
+                         setTimeout(function(){
+                             $('.section_three .page3_3').show().addClass('animated flip');
+                         },2200)
+                         setTimeout(function(){
+                             $('.section_three .page3_4').show().addClass('animated flip');
+                         },2000)
+                         setTimeout(function(){
+                             $('.section_three .page3_5').show().addClass('animated lightSpeedIn');
+                         },3200)
+                         setTimeout(function(){
+                             $('.section_three .page3_6').show().addClass('animated bounceInUp');
+                         },4400)
+
+                         
+                    }else{
+                         $('.section_three .page3_1').hide().removeClass('animated zoomIn');
+                         $('.section_three .page3_2').hide().removeClass('animated zoomInRight');
+                         $('.section_three .page3_3').hide().removeClass('animated flip');
+                         $('.section_three .page3_4').hide().removeClass('animated flip');
+                         $('.section_three .page3_5').hide().removeClass('animated lightSpeedIn');
+                         $('.section_three .page3_6').hide().removeClass('animated bounceInUp');
                     }
 
 
@@ -56,6 +113,7 @@
                 }
             });
 
+            // 点击播放背景音乐
             function play_music() {
                 event.stopPropagation();
                 audioAutoPlay('audiofirst');
@@ -69,7 +127,7 @@
             // setInterval(function () {
             //     $.fn.fullpage.moveSectionDown();
             // }, 20000);
-            //自动播放背景音乐方法
+            //自动播放背景音乐
             function audioAutoPlay(id) {
                 var audio = document.getElementById(id);
                 audio.play();
@@ -80,7 +138,9 @@
                     audio.play();
                 }, false);
             }
-            
+
+
+
         });
     </script>
 </head>
@@ -88,19 +148,49 @@
 <body>
     <div id="fullpage">
         <div class="section section_fitst current">
+            <p class="page1_p">MUS<i>IC</i></p>
+            <img src="images/page1_cd.png" alt="" class="page1_cd">
+            <img src="images/section_1_bg.png" alt="" class="page1_bg">
             <a href="javascript:;" id="mc_play" class="on">
-            <img src="images/play.png" alt="">
-           <audio controls preload='auto'id='audiofirst' class="foo">
-                <source src="vido.mp3" type="audio/mp3"></source>
-            </audio>
-        </a>
+                 <img src="images/play.png" alt="">
+                 <audio controls preload='auto'id='audiofirst' class="foo">
+                    <source src="vido.mp3" type="audio/mp3"></source>
+                 </audio>
+             </a>
         </div>
 
         <div class="section section_two ">
+            <div class="page2_left ">
+                <span>从</span>
+                <span>台</span>
+                <span>湾</span>
+            </div>
+            <div class="page2_top">
+                <span>到</span>
+            </div>
+            <div class="page2_right">
+                <span>广州</span>
+            </div>
+            <div class="page2_bottom">
+                <span>2018销售大会</span>
+            </div>
+            <div class="page2_video">
+
+            </div>
         </div>
 
         <div class="section section_three ">
-
+            <div class="page3_1 ">
+                <span>销</span>
+                <span>售</span>
+                <span>大</span>
+                <span>会</span>
+            </div>
+            <img src="images/page3_2.png" alt="" class="page3_2">
+            <img src="images/page3_4.png" alt="" class="page3_4">
+            <img src="images/page3_3.png" alt="" class="page3_3">
+            <p class="page3_5">3/12-3/15</p>
+            <p class="page3_6">南丰朗豪酒店</p>
         </div>
 
         <div class="section section_four ">
