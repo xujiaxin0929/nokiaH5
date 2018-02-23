@@ -394,6 +394,9 @@ p {
   bottom: 30px;
   left: 50%;
   margin-left: -85px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 
 .section_fitst a img {

@@ -1,60 +1,70 @@
 @import "reset";
-.section_fitst{
+.section_fitst {
     background: url('../images/section_1.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
-    a{
+    a {
         width: auto;
         height: auto;
         position: absolute;
         bottom: 30px;
         left: 50%;
         margin-left: -85px;
-        img{
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        img {
             z-index: 2;
         }
-        audio{
+        audio {
             opacity: 0;
         }
     }
 }
-.audiolast{
+
+.audiolast {
     position: fixed;
     left: -50%;
     bottom: 0;
 }
-.section_two{
+
+.section_two {
     background: url('../images/section_2.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
 }
-.section_three{
+
+.section_three {
     background: url('../images/section_3.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
 }
-.section_four{
+
+.section_four {
     background: url('../images/section_4.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
 }
-.section_five{
+
+.section_five {
     background: url('../images/section_5.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
 }
-.section_six{
+
+.section_six {
     background: url('../images/section_6.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
     position: relative;
 }
-.section_last{
+
+.section_last {
     background: url('../images/section_7.png')no-repeat;
     background-position: left top;
     background-size: 100% 100%;
