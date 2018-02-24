@@ -32,6 +32,7 @@
                     console.log(index, nextIndex)
                     // console.log(nextIndex)
                     if (index == 1) {
+                        $('#audiofirst').hide();
                         myVideo.pause();
                     }
 
@@ -47,13 +48,16 @@
                     setTimeout(function () {
                         $(".section").eq(index - 1).addClass("current");
                     }, 30)
+                    if(index == '1'){
+                        $('#audiofirst').show();
+                    }
                     if (index == '1' || index == '2') {
                         lastVideo.pause();
 
                     } else if (index == '3') {
                         // alert(1)
                         // lastVideo.play();
-                        // $('#audiolast').trigger("click");
+                        $('audio').trigger("click");
                         audioAutoPlay('audiolast')
                     }
                     // 添加css3
@@ -193,7 +197,7 @@
 
             // 点击播放背景音乐
             function play_music() {
-                event.stopPropagation();
+                // event.stopPropagation();
                 audioAutoPlay('audiofirst');
                 console.log(1)
 
