@@ -380,6 +380,28 @@ p {
   display: none !important;
 }
 
+.load {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #ece8de;
+}
+
+.load img {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 8.77333rem;
+  height: 6.57333rem;
+  margin-top: -3.28rem;
+  margin-left: -4.38667rem;
+}
+
 .section_fitst {
   background: url("../images/section_1.png") no-repeat;
   background-position: left top;

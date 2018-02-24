@@ -1,4 +1,24 @@
 @import "reset";
+.load{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #ece8de;
+    img{
+        position: fixed;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        width: rem(658);
+        height: rem(493);
+        margin-top: rem(-246);
+        margin-left: rem(-329);
+    }
+}
 .section_fitst {
     background: url('../images/section_1.png')no-repeat;
     background-position: left top;

@@ -224,6 +224,10 @@
 </head>
 
 <body>
+    <div class="load">
+        <img src="images/load.gif" alt="">
+    </div>
+    
     <div id="fullpage">
         <div class="section section_fitst current">
             <p class="page1_p">MUS<i>IC</i></p>
@@ -313,10 +317,13 @@
     var img = [],
         flag = 0,
         mulitImg = [
-            'images/page7_child.png',
-            'images/page7_want.png',
-            'images/page7_erwei.png',
-            'images/section_6.png'
+            'images/section_1.png',
+            'images/section_2.png',
+            'images/section_3.png',
+            'images/section_4.png',
+            'images/section_5.png',
+            'images/section_6.png',
+            'images/section_7.png',
         ];
     var imgTotal = mulitImg.length;
     for (var i = 0; i < imgTotal; i++) {
@@ -327,7 +334,9 @@
             flag++
             if (flag == imgTotal) {
                 //全部加载完成
-                alert(1)
+               setTimeout(function() {
+                    $('.load').hide();
+               }, 2000);
             }
         }
     }
