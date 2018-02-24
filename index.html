@@ -32,7 +32,6 @@
                     console.log(index, nextIndex)
                     // console.log(nextIndex)
                     if (index == 1) {
-                        $('#audiofirst').hide();
                         myVideo.pause();
                     }
 
@@ -43,22 +42,34 @@
                     console.log(index);
                     //清除所有的current样式
                     $(".section").removeClass("current");
-
                     //添加类名
                     setTimeout(function () {
                         $(".section").eq(index - 1).addClass("current");
                     }, 30)
-                    if(index == '1'){
-                        $('#audiofirst').show();
-                    }
+
                     if (index == '1' || index == '2') {
                         lastVideo.pause();
 
                     } else if (index == '3') {
                         // alert(1)
                         // lastVideo.play();
-                        $('audio').trigger("click");
-                        audioAutoPlay('audiolast')
+                        // $('#audiolast').trigger("click");
+                        // audioAutoPlay('audiolast')
+                        $('#audiolast').on('click',function(){
+                            lastVideo.play();
+                        })
+                        setTimeout(function () {
+                            // IE
+                            if (document.all) {
+                                document.getElementById("audiolast").click();
+                            }
+                            // 其它浏览器
+                            else {
+                                var e = document.createEvent("MouseEvents");
+                                e.initEvent("click", true, true);
+                                document.getElementById("audiolast").dispatchEvent(e);
+                            }
+                        }, 10);
                     }
                     // 添加css3
                     if (index == '1') {
@@ -231,7 +242,7 @@
     <div class="load">
         <img src="images/load.gif" alt="">
     </div>
-    
+
     <div id="fullpage">
         <div class="section section_fitst current">
             <p class="page1_p">MUS<i>IC</i></p>
@@ -294,6 +305,7 @@
             <p class="page5_1"><i>坚</i><i>守</i></p>
             <img src="images/page5_2.png" alt="" class="page5_2">
             <img src="images/page5_3.png" alt="" class="page5_3">
+            <!--<p class="page5_3">&</p>-->
             <h3 class="page5_4">变</h3>
             <h3 class="page5_5">通</h3>
             <img src="images/page5_6.png" alt="" class="page5_6">
@@ -338,9 +350,9 @@
             flag++
             if (flag == imgTotal) {
                 //全部加载完成
-               setTimeout(function() {
+                setTimeout(function () {
                     $('.load').hide();
-               }, 2000);
+                }, 1000);
             }
         }
     }
