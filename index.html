@@ -57,57 +57,135 @@
                         // audioAutoPlay('audiolast')
                     }
                     // 添加css3
-                    if(index == '1'){
-                         $('.section_fitst .page1_p').show().addClass('animated bounceInDown');
-                    }else{
-                         $('.section_fitst .page1_p').hide().removeClass('animated bounceInDown');
+                    if (index == '1') {
+                        $('.section_fitst .page1_p').show().addClass('animated bounceInDown');
+                    } else {
+                        $('.section_fitst .page1_p').hide().removeClass('animated bounceInDown');
                     }
-                    if(index == '2'){
-                         $('.section_two .page2_left').show().addClass('animated rollIn');
-                         setTimeout(function(){
-                             $('.section_two .page2_top').show().addClass('animated bounceInDown');
-                         },1000)
-                         setTimeout(function(){
-                             $('.section_two .page2_right').show().addClass('animated fadeInRight');
-                         },1800)
-                         setTimeout(function(){
-                             $('.section_two .page2_bottom').show().addClass('animated fadeInUpBig');
-                         },2500)
-                         
-                    }else{
-                         $('.section_two .page2_left').hide().removeClass('animated rollIn');
-                         $('.section_two .page2_top').hide().removeClass('animated bounceInDown');
-                         $('.section_two .page2_right').hide().removeClass('animated fadeInRight');
-                         $('.section_two .page2_bottom').hide().removeClass('animated fadeInUpBig');
-                    }
-                    if(index == '3'){
-                         $('.section_three .page3_1').show().addClass('animated zoomIn');
-                         setTimeout(function(){
-                             $('.section_three .page3_2').show().addClass('animated zoomInRight');
-                         },1000)
-                         setTimeout(function(){
-                             $('.section_three .page3_3').show().addClass('animated flip');
-                         },2200)
-                         setTimeout(function(){
-                             $('.section_three .page3_4').show().addClass('animated flip');
-                         },2000)
-                         setTimeout(function(){
-                             $('.section_three .page3_5').show().addClass('animated lightSpeedIn');
-                         },3200)
-                         setTimeout(function(){
-                             $('.section_three .page3_6').show().addClass('animated bounceInUp');
-                         },4400)
+                    if (index == '2') {
+                        $('.section_two .page2_left').show().addClass('animated rollIn');
+                        setTimeout(function () {
+                            $('.section_two .page2_top').show().addClass('animated bounceInDown');
+                        }, 1000)
+                        setTimeout(function () {
+                            $('.section_two .page2_right').show().addClass('animated fadeInRight');
+                        }, 1800)
+                        setTimeout(function () {
+                            $('.section_two .page2_bottom').show().addClass('animated fadeInUpBig');
+                        }, 2500)
 
-                         
-                    }else{
-                         $('.section_three .page3_1').hide().removeClass('animated zoomIn');
-                         $('.section_three .page3_2').hide().removeClass('animated zoomInRight');
-                         $('.section_three .page3_3').hide().removeClass('animated flip');
-                         $('.section_three .page3_4').hide().removeClass('animated flip');
-                         $('.section_three .page3_5').hide().removeClass('animated lightSpeedIn');
-                         $('.section_three .page3_6').hide().removeClass('animated bounceInUp');
+                    } else {
+                        $('.section_two .page2_left').hide().removeClass('animated rollIn');
+                        $('.section_two .page2_top').hide().removeClass('animated bounceInDown');
+                        $('.section_two .page2_right').hide().removeClass('animated fadeInRight');
+                        $('.section_two .page2_bottom').hide().removeClass('animated fadeInUpBig');
                     }
+                    if (index == '3') {
+                        $('.section_three .page3_1').show().addClass('animated zoomIn');
+                        setTimeout(function () {
+                            $('.section_three .page3_2').show().addClass('animated zoomInRight');
+                        }, 1000)
+                        setTimeout(function () {
+                            $('.section_three .page3_3').show().addClass('animated flip');
+                        }, 2200)
+                        setTimeout(function () {
+                            $('.section_three .page3_4').show().addClass('animated flip');
+                        }, 2000)
+                        setTimeout(function () {
+                            $('.section_three .page3_5').show().addClass('animated lightSpeedIn');
+                        }, 3200)
+                        setTimeout(function () {
+                            $('.section_three .page3_6').show().addClass('animated bounceInUp');
+                        }, 4400)
 
+
+                    } else {
+                        $('.section_three .page3_1').hide().removeClass('animated zoomIn');
+                        $('.section_three .page3_2').hide().removeClass('animated zoomInRight');
+                        $('.section_three .page3_3').hide().removeClass('animated flip');
+                        $('.section_three .page3_4').hide().removeClass('animated flip');
+                        $('.section_three .page3_5').hide().removeClass('animated lightSpeedIn');
+                        $('.section_three .page3_6').hide().removeClass('animated bounceInUp');
+                    }
+                    if (index == '4') {
+                        setTimeout(function () {
+                            $('.section_four .page4_2').show().addClass('animated bounceInRight');
+                        }, 3100);
+                        setTimeout(function () {
+                            $('.section_four .page4_3').show().addClass('animated bounceInRight');
+                        }, 3200);
+                        setTimeout(function () {
+                            $('.section_four .page4_5').show().addClass('animated slideInLeft');
+                        }, 7600);
+                        setTimeout(function () {
+                            $('.section_four .page4_6').show().addClass('animated fadeInUpBig');
+                        }, 8000);
+                        setTimeout(function () {
+                            $('.section_four .page4_7').show().addClass('animated fadeInUpBig');
+                        }, 8100);
+                        setTimeout(function () {
+                            $('.section_four .page4_8').show().addClass('animated fadeInUpBig');
+                        }, 8200);
+
+                    } else {
+                        $('.section_four .page4_2').hide().removeClass('animated bounceInRight');
+                        $('.section_four .page4_3').hide().removeClass('animated bounceInRight');
+                        $('.section_four .page4_5').hide().removeClass('animated slideInLeft');
+                        $('.section_four .page4_6').hide().removeClass('animated fadeInUpBig');
+                        $('.section_four .page4_7').hide().removeClass('animated fadeInUpBig');
+                        $('.section_four .page4_8').hide().removeClass('animated fadeInUpBig');
+                    }
+                    if (index == '5') {
+                        setTimeout(function () {
+                            $('.section_five .page5_2').show().addClass('animated fadeInLeft');
+                        }, 2000);
+                        setTimeout(function () {
+                            $('.section_five .page5_3').show().addClass('animated wobble');
+                        }, 2400);
+                        setTimeout(function () {
+                            $('.section_five .page5_4').show().addClass('animated bounceInUp');
+                        }, 3000);
+                        setTimeout(function () {
+                            $('.section_five .page5_5').show().addClass('animated bounceInUp');
+                        }, 3400);
+                        setTimeout(function () {
+                            $('.section_five .page5_6').addClass('animated swing');
+                        }, 4400);
+                    } else {
+                        $('.section_five .page5_2').hide().removeClass('animated fadeInLeft');
+                        $('.section_five .page5_3').hide().removeClass('animated wobble');
+                        $('.section_five .page5_4').hide().removeClass('animated bounceInUp');
+                        $('.section_five .page5_5').hide().removeClass('animated bounceInUp');
+                        $('.section_five .page5_6').removeClass('animated swing');
+                    }
+                    if (index == '6') {
+                        $('.section_six .page6_1').show();
+                        setTimeout(function () {
+                            $('.section_six .page6_2').show();
+                        }, 1400);
+                        setTimeout(function () {
+                            $('.section_six .page6_3').show();
+                        }, 2600);
+                        setTimeout(function () {
+                            $('.section_six .page6_4').show();
+                        }, 3800);
+                    } else {
+                        $('.section_six .page6_1').hide();
+                        $('.section_six .page6_2').hide();
+                        $('.section_six .page6_3').hide();
+                        $('.section_six .page6_4').hide();
+                    }
+                    if (index == '7') {
+                        setTimeout(function () {
+                            $('.section_last .page7_want').show().addClass('animated bounceInDown');
+                        }, 1100);
+                        setTimeout(function () {
+                            $('.section_last .page7_erwei').show().addClass('animated rollIn');
+                        }, 5400);
+                    } else {
+                        $('.section_last .page7_want').hide().removeClass('animated bounceInDown');
+                        $('.section_last .page7_erwei').hide().removeClass('animated rollIn');
+                    }
 
 
                 }
@@ -194,12 +272,35 @@
         </div>
 
         <div class="section section_four ">
+            <span class="page4_1">Thinking</span>
+            <span class="page4_2">Beyond</span>
+            <span class="page4_3">销售策略</span>
+            <h2 class="page4_4">力拓新业务</h2>
+            <img src="images/page4_5.png" alt="" class="page4_5">
+            <p class="page4_6">可销售</p>
+            <p class="page4_7">Winning</p>
+            <p class="page4_8">产品方案</p>
+            <p class="page4_9">行动计划</p>
         </div>
         <div class="section section_five ">
+            <p class="page5_1"><i>坚</i><i>守</i></p>
+            <img src="images/page5_2.png" alt="" class="page5_2">
+            <img src="images/page5_3.png" alt="" class="page5_3">
+            <h3 class="page5_4">变</h3>
+            <h3 class="page5_5">通</h3>
+            <img src="images/page5_6.png" alt="" class="page5_6">
         </div>
         <div class="section section_six ">
+            <img src="images/page6_1.png" alt="" class="page6_1">
+            <img src="images/page6_2.png" alt="" class="page6_2">
+            <img src="images/page6_3.png" alt="" class="page6_3">
+            <img src="images/page6_4.png" alt="" class="page6_4">
         </div>
         <div class="section section_last ">
+            <img src="images/page7_child.png" alt="" class="page7_child">
+            <img src="images/page7_want.png" alt="" class="page7_want">
+            <p class="page7_p">广州销售大会等你来</p>
+            <img src="images/page7_erwei.png" alt="" class="page7_erwei">
         </div>
     </div>
 
@@ -208,5 +309,29 @@
         <source src="vidoo.mp3" type="audio/mp3"></source>
     </audio>
 </body>
+<script>
+    var img = [],
+        flag = 0,
+        mulitImg = [
+            'images/page7_child.png',
+            'images/page7_want.png',
+            'images/page7_erwei.png',
+            'images/section_6.png'
+        ];
+    var imgTotal = mulitImg.length;
+    for (var i = 0; i < imgTotal; i++) {
+        img[i] = new Image()
+        img[i].src = mulitImg[i]
+        img[i].onload = function () {
+            //第i张图片加载完成
+            flag++
+            if (flag == imgTotal) {
+                //全部加载完成
+                alert(1)
+            }
+        }
+    }
+
+</script>
 
 </html>

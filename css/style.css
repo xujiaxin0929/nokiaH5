@@ -614,11 +614,208 @@ p {
   position: relative;
 }
 
+.section_four .page4_1 {
+  position: absolute;
+  font-size: 0.6rem;
+  color: #fff;
+  line-height: 1;
+  font-weight: normal;
+  top: 4.53333rem;
+  left: -3.33333rem;
+  opacity: .8;
+  letter-spacing: 0.05333rem;
+}
+
+.section_four .page4_2 {
+  position: absolute;
+  font-size: 1.01333rem;
+  color: #fff;
+  font-weight: normal;
+  line-height: 1;
+  top: 3.38667rem;
+  right: 1.06667rem;
+}
+
+.section_four .page4_3 {
+  position: absolute;
+  font-size: 0.82667rem;
+  color: #4ebb50;
+  line-height: 1;
+  top: 5.28rem;
+  right: 1.06667rem;
+}
+
+.section_four .page4_4 {
+  position: absolute;
+  font-size: 0rem;
+  color: #fff;
+  line-height: 1;
+  top: 7.06667rem;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+}
+
+.section_four .page4_5 {
+  position: absolute;
+  width: 1.05333rem;
+  height: 3.18667rem;
+  top: 9.54667rem;
+  left: 1.12rem;
+}
+
+.section_four .page4_6 {
+  position: absolute;
+  font-size: 0.64rem;
+  color: #14bd51;
+  line-height: 1;
+  font-weight: normal;
+  top: 9.54667rem;
+  left: 2.50667rem;
+}
+
+.section_four .page4_7 {
+  position: absolute;
+  font-size: 0.93333rem;
+  color: #fff;
+  line-height: 1;
+  opacity: .8;
+  font-weight: normal;
+  top: 10.61333rem;
+  left: 2.50667rem;
+}
+
+.section_four .page4_8 {
+  position: absolute;
+  font-size: 1.14667rem;
+  color: #f5e010;
+  line-height: 1;
+  opacity: 1;
+  font-weight: normal;
+  top: 11.81333rem;
+  left: 2.50667rem;
+  font-weight: 600;
+}
+
+.section_four .page4_9 {
+  position: absolute;
+  font-size: 0.69333rem;
+  color: #fff;
+  right: -4rem;
+  top: 9.54667rem;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.current .page4_1 {
+  left: 3.73333rem;
+  transition: all 3s ease-in-out;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* Internet Explorer */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */
+}
+
+.current .page4_4 {
+  transition: all 3s 4.4s linear;
+  font-size: 1.54667rem;
+  opacity: 1;
+}
+
+.current .page4_9 {
+  transition: all 3s 8.6s ease;
+  right: 1.06667rem;
+}
+
 .section_five {
   background: url("../images/section_5.png") no-repeat;
   background-position: left top;
   background-size: 100% 100%;
   position: relative;
+}
+
+.section_five .page5_1 {
+  position: absolute;
+  top: 2.85333rem;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.section_five .page5_1 i {
+  font-size: 10.66667rem;
+  text-shadow: 2px 3px 19px #000;
+  font-style: normal;
+  opacity: 0;
+}
+
+.section_five .page5_2 {
+  position: absolute;
+  top: 6.42667rem;
+  left: 2rem;
+  width: 3.73333rem;
+  height: 0.56rem;
+}
+
+.section_five .page5_3 {
+  position: absolute;
+  z-index: 2;
+  top: 5.46667rem;
+  right: -5.33333rem;
+}
+
+.section_five .page5_4 {
+  position: absolute;
+  z-index: 2;
+  top: 8.98667rem;
+  left: 1.17333rem;
+  color: #fff;
+  text-shadow: 2px 3px 19px #000;
+  font-size: 3.2rem;
+}
+
+.section_five .page5_5 {
+  position: absolute;
+  top: 8.21333rem;
+  left: 3.89333rem;
+  color: #fff;
+  text-shadow: 2px 3px 19px #000;
+  font-size: 3.2rem;
+}
+
+.section_five .page5_6 {
+  position: absolute;
+  width: 5.01333rem;
+  height: 0.56rem;
+  top: 12.34667rem;
+  right: -6.66667rem;
+}
+
+.current .page5_1 i:nth-of-type(1) {
+  font-size: 3.2rem;
+  transition: all 1s linear;
+  opacity: 1;
+}
+
+.current .page5_1 i:nth-of-type(2) {
+  font-size: 3.2rem;
+  opacity: 1;
+  transition: all 1s 1s linear;
+}
+
+.current .page5_3 {
+  right: 0;
+  transition: all 2s 2s linear;
+}
+
+.current .page5_6 {
+  right: 0.42667rem;
+  transition: all 2s 4s ease-out;
 }
 
 .section_six {
@@ -628,11 +825,130 @@ p {
   position: relative;
 }
 
+.section_six .page6_1 {
+  width: 7.41333rem;
+  height: 5.33333rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.70667rem;
+  top: 0.85333rem;
+  transform: scale(10, 10);
+}
+
+.section_six .page6_2 {
+  width: 9.57333rem;
+  height: 16.41333rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -4.78667rem;
+  top: 0rem;
+  display: none;
+}
+
+.section_six .page6_3 {
+  width: 7.32rem;
+  height: 5.21333rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -2.8rem;
+  top: 7.13333rem;
+  display: none;
+}
+
+.section_six .page6_4 {
+  width: 6.41333rem;
+  height: 4.73333rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -4rem;
+  top: 10.4rem;
+  display: none;
+}
+
+.current .page6_1 {
+  display: block;
+  transition: all 1s linear;
+  transform: scale(1, 1);
+}
+
+.current .page6_2 {
+  -webkit-animation: show1 1s  ease-out;
+  -moz-animation: show1 1s  ease-out;
+  -o-animation: show1 1s  ease-out;
+  -ms-animation: show1 1s  ease-out;
+  animation: show1 1s  ease-out;
+}
+
+.current .page6_3 {
+  -webkit-animation: show1 1s  ease-out;
+  -moz-animation: show1 1s  ease-out;
+  -o-animation: show1 1s  ease-out;
+  -ms-animation: show1 1s  ease-out;
+  animation: show1 1s  ease-out;
+}
+
+.current .page6_4 {
+  -webkit-animation: show1 1s  ease-out;
+  -moz-animation: show1 1s  ease-out;
+  -o-animation: show1 1s  ease-out;
+  -ms-animation: show1 1s  ease-out;
+  animation: show1 1s  ease-out;
+}
+
 .section_last {
   background: url("../images/section_7.png") no-repeat;
   background-position: left top;
   background-size: 100% 100%;
   position: relative;
+}
+
+.section_last .page7_child {
+  width: 11.24rem;
+  height: 6.88rem;
+  position: absolute;
+  bottom: -6.66667rem;
+  right: -7.73333rem;
+}
+
+.section_last .page7_want {
+  width: 7.97333rem;
+  height: 4.2rem;
+  position: absolute;
+  top: 1.81333rem;
+  left: 50%;
+  margin-left: -3.98667rem;
+}
+
+.section_last .page7_p {
+  width: 0;
+  height: 0.8rem;
+  overflow: hidden;
+  line-height: 1;
+  font-size: 0.77333rem;
+  font-weight: 600;
+  color: #00c9ff;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.64rem;
+  top: 6.93333rem;
+}
+
+.section_last .page7_erwei {
+  width: 2.33333rem;
+  height: 3.34667rem;
+  position: absolute;
+  bottom: 1.04rem;
+  left: 1.04rem;
+}
+
+.current .page7_child {
+  transition: all 1s linear;
+  bottom: 0;
+  right: -2.4rem;
+}
+
+.current .page7_p {
+  animation: move 4s 2s steps(9) forwards;
 }
 
 /*以下定义动画帧*/
@@ -678,5 +994,145 @@ p {
   }
   100% {
     transform: scale(1.4, 1.4);
+  }
+}
+
+@keyframes show1 {
+  0% {
+    display: block;
+    transform: scale(10, 10);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes show1 {
+  0% {
+    display: block;
+    transform: scale(10, 10);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes show1 {
+  0% {
+    display: block;
+    transform: scale(10, 10);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-o-keyframes show1 {
+  0% {
+    display: block;
+    transform: scale(10, 10);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-ms-keyframes show1 {
+  0% {
+    display: block;
+    transform: scale(10, 10);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes move {
+  0% {
+    width: 0px;
+  }
+  60% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+  80% {
+    width: 7.28rem;
+    transform: scale(3, 3);
+  }
+  100% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    width: 0px;
+  }
+  60% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+  80% {
+    width: 7.28rem;
+    transform: scale(3, 3);
+  }
+  100% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes move {
+  0% {
+    width: 0px;
+  }
+  60% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+  80% {
+    width: 7.28rem;
+    transform: scale(3, 3);
+  }
+  100% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+}
+
+@-o-keyframes move {
+  0% {
+    width: 0px;
+  }
+  60% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+  80% {
+    width: 7.28rem;
+    transform: scale(3, 3);
+  }
+  100% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+}
+
+@-ms-keyframes move {
+  0% {
+    width: 0px;
+  }
+  60% {
+    width: 7.28rem;
+    transform: scale(1, 1);
+  }
+  80% {
+    width: 7.28rem;
+    transform: scale(3, 3);
+  }
+  100% {
+    width: 7.28rem;
+    transform: scale(1, 1);
   }
 }
