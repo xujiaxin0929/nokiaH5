@@ -20,12 +20,13 @@
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         $(document).ready(function () {
+            var scriptappend;
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
             $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
-
+                
                 anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
                 'setAutoScrolling': true,
                 onLeave: function (index, nextIndex) {
@@ -80,69 +81,46 @@
                         $('.section_fitst .page1_p').hide().removeClass('animated bounceInDown');
                     }
                     if (index == '2') {
-                        $('.section_two .page2_left').show().addClass('animated rollIn');
-                        setTimeout(function () {
-                            $('.section_two .page2_top').show().addClass('animated bounceInDown');
-                        }, 1000)
-                        setTimeout(function () {
-                            $('.section_two .page2_right').show().addClass('animated fadeInRight');
-                        }, 1800)
-                        setTimeout(function () {
-                            $('.section_two .page2_bottom').show().addClass('animated fadeInUpBig');
-                        }, 2500)
-
+                        $('.section_two .page2_right').show();
                     } else {
-                        $('.section_two .page2_left').hide().removeClass('animated rollIn');
-                        $('.section_two .page2_top').hide().removeClass('animated bounceInDown');
-                        $('.section_two .page2_right').hide().removeClass('animated fadeInRight');
-                        $('.section_two .page2_bottom').hide().removeClass('animated fadeInUpBig');
+                        $('.section_two .page2_right').hide();
                     }
                     if (index == '3') {
-                        $('.section_three .page3_1').show().addClass('animated zoomIn');
-                        setTimeout(function () {
-                            $('.section_three .page3_2').show().addClass('animated zoomInRight');
-                        }, 1000)
                         setTimeout(function () {
                             $('.section_three .page3_3').show().addClass('animated flip');
-                        }, 2200)
+                        }, 600)
                         setTimeout(function () {
                             $('.section_three .page3_4').show().addClass('animated flip');
-                        }, 2000)
-                        setTimeout(function () {
-                            $('.section_three .page3_5').show().addClass('animated lightSpeedIn');
-                        }, 3200)
-                        setTimeout(function () {
-                            $('.section_three .page3_6').show().addClass('animated bounceInUp');
-                        }, 4400)
+                        }, 400)
+                        // setTimeout(function () {
+                        //     $('.section_three .page3_6').show().addClass('animated bounceInUp');
+                        // }, 2000)
 
 
                     } else {
-                        $('.section_three .page3_1').hide().removeClass('animated zoomIn');
-                        $('.section_three .page3_2').hide().removeClass('animated zoomInRight');
                         $('.section_three .page3_3').hide().removeClass('animated flip');
                         $('.section_three .page3_4').hide().removeClass('animated flip');
-                        $('.section_three .page3_5').hide().removeClass('animated lightSpeedIn');
-                        $('.section_three .page3_6').hide().removeClass('animated bounceInUp');
+                        // $('.section_three .page3_6').hide().removeClass('animated bounceInUp');
                     }
                     if (index == '4') {
                         setTimeout(function () {
                             $('.section_four .page4_2').show().addClass('animated bounceInRight');
-                        }, 3100);
+                        }, 500);
                         setTimeout(function () {
                             $('.section_four .page4_3').show().addClass('animated bounceInRight');
-                        }, 3200);
+                        }, 500);
                         setTimeout(function () {
                             $('.section_four .page4_5').show().addClass('animated slideInLeft');
-                        }, 7600);
+                        }, 1500);
                         setTimeout(function () {
                             $('.section_four .page4_6').show().addClass('animated fadeInUpBig');
-                        }, 8000);
+                        }, 1700);
                         setTimeout(function () {
                             $('.section_four .page4_7').show().addClass('animated fadeInUpBig');
-                        }, 8100);
+                        }, 1800);
                         setTimeout(function () {
                             $('.section_four .page4_8').show().addClass('animated fadeInUpBig');
-                        }, 8200);
+                        }, 1900);
 
                     } else {
                         $('.section_four .page4_2').hide().removeClass('animated bounceInRight');
@@ -154,38 +132,23 @@
                     }
                     if (index == '5') {
                         setTimeout(function () {
-                            $('.section_five .page5_2').show().addClass('animated fadeInLeft');
-                        }, 2000);
-                        setTimeout(function () {
                             $('.section_five .page5_3').show().addClass('animated wobble');
-                        }, 2400);
-                        setTimeout(function () {
-                            $('.section_five .page5_4').show().addClass('animated bounceInUp');
-                        }, 3000);
-                        setTimeout(function () {
-                            $('.section_five .page5_5').show().addClass('animated bounceInUp');
-                        }, 3400);
-                        setTimeout(function () {
-                            $('.section_five .page5_6').addClass('animated swing');
-                        }, 4400);
+                        }, 500);
                     } else {
-                        $('.section_five .page5_2').hide().removeClass('animated fadeInLeft');
+                        
                         $('.section_five .page5_3').hide().removeClass('animated wobble');
-                        $('.section_five .page5_4').hide().removeClass('animated bounceInUp');
-                        $('.section_five .page5_5').hide().removeClass('animated bounceInUp');
-                        $('.section_five .page5_6').removeClass('animated swing');
                     }
                     if (index == '6') {
                         $('.section_six .page6_1').show();
                         setTimeout(function () {
                             $('.section_six .page6_2').show();
-                        }, 1400);
+                        }, 400);
                         setTimeout(function () {
                             $('.section_six .page6_3').show();
-                        }, 2600);
+                        }, 800);
                         setTimeout(function () {
                             $('.section_six .page6_4').show();
-                        }, 3800);
+                        }, 1200);
                     } else {
                         $('.section_six .page6_1').hide();
                         $('.section_six .page6_2').hide();
@@ -193,12 +156,10 @@
                         $('.section_six .page6_4').hide();
                     }
                     if (index == '7') {
-                        setTimeout(function () {
                             $('.section_last .page7_want').show().addClass('animated bounceInDown');
-                        }, 1100);
                         setTimeout(function () {
                             $('.section_last .page7_erwei').show().addClass('animated rollIn');
-                        }, 5400);
+                        }, 2200);
                     } else {
                         $('.section_last .page7_want').hide().removeClass('animated bounceInDown');
                         $('.section_last .page7_erwei').hide().removeClass('animated rollIn');
@@ -216,8 +177,28 @@
 
             }
 
+            function click_music() {
+                // event.stopPropagation();
+                audioAutoPlay('clickaudio');
+                console.log(2)
+
+            }
+
             $('#mc_play').on('click', function (e) {
-                play_music();
+                $('.page1_cl').addClass('page1_cl_active');
+                //点击后禁止首页再滑动 
+                scriptappend = `$(document).ready(function(){
+                    $("#fullpage").fullpage({normalScrollElements:".section_fitst"})
+                    })`;
+                $('#appendfirstpage').html(scriptappend);   //将标签插入body尾部
+                click_music();
+                setTimeout(() => {
+                    play_music();
+                }, 1000);
+                setTimeout(() => {
+                    $('#appendfirstpage').html('');
+                    $('.page1_jiantou').addClass('show');
+                }, 10000);
             })
             // setInterval(function () {
             //     $.fn.fullpage.moveSectionDown();
@@ -251,6 +232,7 @@
 
         });
     </script>
+    
 </head>
 
 <body>
@@ -261,7 +243,12 @@
     <div id="fullpage">
         <div class="section section_fitst current">
             <p class="page1_p">MUS<i>IC</i></p>
-            <img src="images/page1_cd.png" alt="" class="page1_cd">
+            <img src="images/page1_video_1.png" alt="" class="page1_video_1">
+            <img src="images/page1_video_2.png" alt="" class="page1_video_2">
+            <img src="images/WechatIMG31.png" alt="" class="page1_video_3">
+            
+            <img src="images/page1_cl.png" alt="" class="page1_cl_1 page1_cl">
+            <img src="images/page1_cl.png" alt="" class="page1_cl_2 page1_cl">
             <img src="images/section_1_bg.png" alt="" class="page1_bg">
             <a href="javascript:;" id="mc_play" class="on">
                  <img src="images/play.png" alt="">
@@ -269,6 +256,7 @@
                     <source src="vido.mp3" type="audio/mp3"></source>
                  </audio>
              </a>
+             <img src="images/jiantouup.png" alt="" class="page1_jiantou">
         </div>
 
         <div class="section section_two ">
@@ -280,14 +268,12 @@
             <div class="page2_top">
                 <span>到</span>
             </div>
-            <div class="page2_right">
-                <span>广州</span>
-            </div>
+            <img src="images/page2_right.png" alt="" class="page2_right"> 
             <div class="page2_bottom">
                 <span>2018销售大会</span>
             </div>
             <div class="page2_video">
-
+                <video  src="movie.mp4" controls="controls"></video>
             </div>
         </div>
 
@@ -339,6 +325,9 @@
         </div>
     </div>
     <audio id="audiolast" src="vidoo.mp3" autoplay preload loop controls></audio>
+    <audio controls preload='auto'id='clickaudio' class="clickaudio">
+            <source src="click.mp3" type="audio/mp3"></source>
+    </audio>
 </body>
 <script>
     var img = [],
@@ -369,5 +358,6 @@
     }
 
 </script>
+<script id='appendfirstpage'></script>
 
 </html>
