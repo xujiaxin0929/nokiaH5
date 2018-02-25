@@ -20,7 +20,7 @@
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         $(document).ready(function () {
-            var scriptappend;
+            var scriptappend,scriptremove;
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
             $('#fullpage').fullpage({
@@ -81,6 +81,7 @@
                         $('.section_fitst .page1_p').hide().removeClass('animated bounceInDown');
                     }
                     if (index == '2') {
+                        $('.page1_jiantou').removeClass('show');
                         $('.section_two .page2_right').show();
                     } else {
                         $('.section_two .page2_right').hide();
@@ -187,17 +188,23 @@
             $('#mc_play').on('click', function (e) {
                 $('.page1_cl').addClass('page1_cl_active');
                 //点击后禁止首页再滑动 
-                scriptappend = `$(document).ready(function(){
+                /*scriptappend = `$(document).ready(function(){
                     $("#fullpage").fullpage({normalScrollElements:".section_fitst"})
-                    })`;
-                $('#appendfirstpage').html(scriptappend);   //将标签插入body尾部
+                    })`;*/
+                //$('#appendfirstpage').html(scriptappend);   //将标签插入body尾部
+                $('#model').addClass('show');
                 click_music();
                 setTimeout(() => {
                     play_music();
                 }, 1000);
                 setTimeout(() => {
-                    $('#appendfirstpage').html('');
+                    /*scriptremove = `$(document).ready(function(){
+                    $("#fullpage").fullpage({normalScrollElements:""})
+                    })`;
+                    $('#appendfirstpage').html(scriptremove);
+                    */
                     $('.page1_jiantou').addClass('show');
+                    $('#model').removeClass('show');
                 }, 10000);
             })
             // setInterval(function () {
@@ -239,7 +246,7 @@
     <div class="load">
         <img src="images/load.gif" alt="">
     </div>
-
+    <div class="model" id="model"></div>
     <div id="fullpage">
         <div class="section section_fitst current">
             <p class="page1_p">MUS<i>IC</i></p>

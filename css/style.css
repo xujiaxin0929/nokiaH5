@@ -380,6 +380,16 @@ p {
   display: none !important;
 }
 
+#model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
 .load {
   display: block;
   width: 100%;
@@ -584,7 +594,6 @@ p {
   width: 5.16rem;
   height: 2.53333rem;
   transform: scale(10, 10);
-  display: none;
 }
 
 .section_two .page2_bottom {
@@ -619,10 +628,6 @@ p {
   width: 8.64rem;
   height: 5.6rem;
   opacity: 0;
-}
-
-.current .page2_right {
-  display: block;
 }
 
 .current .page2_video {
