@@ -23,7 +23,7 @@
             var scriptappend,scriptremove;
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
-            var audio;
+            var audio,audioo;
             $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
@@ -59,7 +59,7 @@
                         //     alert(1)
                         //     audioAutoPlay('audiolast');
                         // })
-                        audioAutoPlay('audiolast');
+                        audioAutoPlay2('audiolast');
                         // alert(1)
                         // lastVideo.play();
                         // $('#audiolast').trigger("click");
@@ -227,7 +227,16 @@
                     audio.play();
                 }, false);
             }
-
+            function audioAutoPlay2(id) {
+                audioo = document.getElementById(id);
+                audioo.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    audioo.play();
+                }, false);
+                document.addEventListener('YixinJSBridgeReady', function () {
+                    audioo.play();
+                }, false);
+            }
             function autoPlayAudio1() {
                 wx.config({
                     // 配置信息, 即使不正确也能使用 wx.ready
