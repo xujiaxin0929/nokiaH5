@@ -23,6 +23,7 @@
             var scriptappend,scriptremove;
             var myVideo = document.getElementById("audiofirst");
             var lastVideo = document.getElementById("audiolast");
+            var audio；
             $('#fullpage').fullpage({
 
                 // slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
@@ -212,7 +213,7 @@
             // }, 20000);
             //自动播放背景音乐
             function audioAutoPlay(id) {
-                var audio = document.getElementById(id);
+                audio = document.getElementById(id);
                 audio.play();
                 document.addEventListener("WeixinJSBridgeReady", function () {
                     audio.play();
