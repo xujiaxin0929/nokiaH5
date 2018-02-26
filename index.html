@@ -57,8 +57,8 @@
                        
                         $('.section_three').on('click',function(){
                             // alert(1)
-                            // audioAutoPlay2('audiolast');
-                            play_lastmusic();
+                            audioAutoPlay2('audiolast');
+                            // play_lastmusic();
                         })
                         
                         // alert(1)
@@ -193,7 +193,7 @@
             }
 
             function play_lastmusic(){
-                audioAutoPlay2('audiofirst');
+                audioAutoPlay2('audiolast');
             }
 
             $('#mc_play').on('click', function (e) {
@@ -284,6 +284,7 @@
                  </audio>
              </a>
              <img src="images/jiantouup.png" alt="" class="page1_jiantou">
+             
         </div>
 
         <div class="section section_two ">
@@ -300,7 +301,8 @@
                 <span>2018销售大会</span>
             </div>
             <div class="page2_video">
-                <video  src="movie.mp4" controls="controls"></video>
+                <!-- <video  src="movie.mp4" controls="controls"></video> -->
+                <iframe style="width: 8.64rem;height:  5.6rem;" src='http://player.youku.com/embed/XMzQxNzc5OTc3Mg==' frameborder=0 'allowfullscreen'></iframe>
             </div>
         </div>
 
