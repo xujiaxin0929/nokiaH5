@@ -53,8 +53,11 @@
                         lastVideo.pause();
 
                     } else if (index == '3') {
-                        // $('document').trigger("click");
-                        audioAutoPlay('audiolast');
+                        $('document').trigger("click");
+                       
+                        $('document').click(function(){
+                            audioAutoPlay('audiolast');
+                        })
                         // alert(1)
                         // lastVideo.play();
                         // $('#audiolast').trigger("click");
