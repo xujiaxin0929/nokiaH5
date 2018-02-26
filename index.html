@@ -55,9 +55,10 @@
                     } else if (index == '3') {
                         $('.section_three').trigger("click");
                        
-                        $('.section_three').click(function(){
+                        $('.section_three').on('click',function(){
                             // alert(1)
-                            audioAutoPlay2('audiolast');
+                            // audioAutoPlay2('audiolast');
+                            play_lastmusic();
                         })
                         
                         // alert(1)
@@ -189,6 +190,10 @@
                 audioAutoPlay('clickaudio');
                 console.log(2)
 
+            }
+
+            function play_lastmusic(){
+                audioAutoPlay2('audiolast');
             }
 
             $('#mc_play').on('click', function (e) {
