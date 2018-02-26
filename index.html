@@ -53,11 +53,13 @@
                         lastVideo.pause();
 
                     } else if (index == '3') {
-                        $('document').trigger("click");
+                        // $('#audiolast').trigger("click");
                        
-                        $('document').click(function(){
-                            audioAutoPlay('audiolast');
-                        })
+                        // $('#audiolast').click(function(){
+                        //     alert(1)
+                        //     audioAutoPlay('audiolast');
+                        // })
+                        audioAutoPlay('audiolast');
                         // alert(1)
                         // lastVideo.play();
                         // $('#audiolast').trigger("click");
@@ -335,10 +337,13 @@
             <img src="images/page7_erwei.png" alt="" class="page7_erwei">
         </div>
     </div>
-    <audio id="audiolast" src="vidoo.mp3" autoplay preload loop controls></audio>
     <audio controls preload='auto'id='clickaudio' class="clickaudio">
             <source src="click.mp3" type="audio/mp3"></source>
     </audio>
+    <audio controls preload='auto'id='audiolast' >
+            <source src="vidoo.mp3" type="audio/mp3"></source>
+    </audio>
+    
 </body>
 <script>
     var img = [],
